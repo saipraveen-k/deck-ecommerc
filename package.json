@@ -1,0 +1,29 @@
+{
+  "name": "deck-ecommerce",
+  "version": "1.0.0",
+  "description": "Premium clothing e-commerce store built with Medusa.js and Next.js",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:frontend": "npm run dev --workspace=apps/frontend",
+    "dev:backend": "npm run dev --workspace=apps/backend",
+    "build": "npm run build --workspace=apps/frontend && npm run build --workspace=apps/backend",
+    "start": "concurrently \"npm run start --workspace=apps/backend\" \"npm run start --workspace=apps/frontend\"",
+    "lint": "npm run lint --workspace=apps/frontend && npm run lint --workspace=apps/backend",
+    "test": "npm run test --workspaces",
+    "clean": "npm run clean --workspaces && rm -rf node_modules"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
