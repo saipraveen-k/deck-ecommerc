@@ -1,0 +1,12 @@
+{
+  "buildCommand": "cd apps/frontend && npm install --legacy-peer-deps && npm run build",
+  "devCommand": "cd apps/frontend && npm run dev",
+  "installCommand": "cd apps/frontend && npm install --legacy-peer-deps",
+  "framework": "nextjs",
+  "outputDirectory": "apps/frontend/.next",
+  "regions": ["iad1"],
+  "env": {
+    "NEXT_PUBLIC_MEDUSA_BACKEND_URL": "https://deck-backend-production.up.railway.app",
+    "NEXT_PUBLIC_STORE_URL": "https://deck-ecommerce.vercel.app"
+  }
+}

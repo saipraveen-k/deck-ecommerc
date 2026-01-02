@@ -7,21 +7,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "type-check": "tsc --noEmit",
-    "clean": "rm -rf .next node_modules"
+    "lint": "next lint"
   },
   "dependencies": {
     "next": "14.0.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@medusajs/medusa-js": "^1.4.0",
-    "@medusajs/medusa-react": "^1.4.0",
     "axios": "^1.6.2",
     "zustand": "^4.4.7",
-    "@tanstack/react-query": "^5.8.4",
+    "@tanstack/react-query": "^5.12.0",
     "framer-motion": "^10.16.16",
-    "lucide-react": "^0.294.0",
+    "lucide-react": "^0.309.0",
     "react-hook-form": "^7.48.2",
     "@hookform/resolvers": "^3.3.2",
     "zod": "^3.22.4",
@@ -36,14 +32,15 @@
     "@radix-ui/react-slider": "^1.1.2",
     "@radix-ui/react-checkbox": "^1.0.4",
     "@radix-ui/react-radio-group": "^1.1.3",
-    "@stripe/stripe-js": "^2.4.0",
+    "@stripe/stripe-js": "^2.1.8",
     "@stripe/react-stripe-js": "^2.4.0",
     "@clerk/nextjs": "^4.27.2",
     "class-variance-authority": "^0.7.0",
     "cmdk": "^0.2.0",
     "embla-carousel-react": "^8.0.0-rc12",
     "react-intersection-observer": "^9.5.3",
-    "react-hot-toast": "^2.4.1"
+    "react-hot-toast": "^2.4.1",
+    "@vercel/analytics": "^1.1.1"
   },
   "devDependencies": {
     "typescript": "^5.3.3",
@@ -52,13 +49,11 @@
     "@types/react-dom": "^18.2.18",
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.32",
-    "tailwindcss": "^3.3.6",
+    "tailwindcss": "^3.4.0",
     "eslint": "^8.56.0",
-    "eslint-config-next": "14.0.4",
-    "@typescript-eslint/eslint-plugin": "^6.15.0",
-    "@typescript-eslint/parser": "^6.15.0"
+    "eslint-config-next": "14.0.4"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": "18.x"
   }
 }
