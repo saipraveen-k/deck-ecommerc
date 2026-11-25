@@ -2,10 +2,11 @@ import { MedusaContainer } from "@medusajs/medusa";
 import cors from "cors";
 import helmet from "helmet";
 import compression from "compression";
+import { asValue } from "awilix";
 
 export default async function containerLoader(container: MedusaContainer): Promise<void> {
   // Security middleware
-  container.register("security", {
+  container.register("security", asValue({
     helmet: helmet({
       contentSecurityPolicy: {
         directives: {
@@ -18,10 +19,10 @@ export default async function containerLoader(container: MedusaContainer): Promi
         },
       },
     }),
-  });
+  }));
 
   // CORS configuration
-  container.register("cors", {
+  container.register("cors", asValue({
     cors: cors({
       origin: [
         process.env.STORE_URL || "http://localhost:3000",
@@ -29,10 +30,10 @@ export default async function containerLoader(container: MedusaContainer): Promi
       ],
       credentials: true,
     }),
-  });
+  }));
 
   // Compression
-  container.register("compression", {
+  container.register("compression", asValue({
     compression: compression(),
-  });
+  }));
 }

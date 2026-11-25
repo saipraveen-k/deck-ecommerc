@@ -23,10 +23,11 @@ const nextConfig = {
     NEXT_PUBLIC_STORE_URL: process.env.NEXT_PUBLIC_STORE_URL,
   },
   async rewrites() {
+    const backend = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL || 'http://localhost:9000';
     return [
       {
         source: '/api/:path*',
-        destination: `${process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL}/api/:path*`,
+        destination: `${backend}/api/:path*`,
       },
     ];
   },
